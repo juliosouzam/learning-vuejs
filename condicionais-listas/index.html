@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js - Lists</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <p v-if="logged">Usuário logado: {{ name }}</p>
+    <p v-else-if="annon">You're annon</p>
+    <p v-else>Nenhum usuário logado</p>
+    <!-- <p v-if="!logged">Nenhum usuário logado</p> -->
+
+    <button @click="logged = !logged">{{ logged ? 'Sign Out' : 'Sign In' }}</button>
+    <input type="checkbox" v-model="annon">
+
+    <hr>
+
+    <template v-if="logged">
+      <p v-if="logged">Usuário logado: {{ name }}</p>
+      <p>Profile: Admin</p>
+    </template>
+
+    <hr>
+
+    <footer v-show="logged">
+      Desenvolvido by me
+    </footer>
+
+    <footer v-show="!logged">
+      Developed to you
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

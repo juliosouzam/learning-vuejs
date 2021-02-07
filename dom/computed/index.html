@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js</title>
+</head>
+
+<body>
+  <div id="app">
+    <button v-on:click="inc">+</button>
+    <button v-on:click="count2++">+ 2</button>
+    <button v-on:click="dec">-</button>
+
+    <p>{{ count }} | {{ count2 }}</p>
+    <p>Resultado: {{ result }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
